@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1>跨域</h1>
+    <ul>
+        <h2>同源</h2>
+        <li>两个url的协议，域名，端口号完全一致，那么这两个url就同源</li>
+        <p></p>
+        <li>https://baidu.com和https://www.baidu.com不同源</li>
+    </ul>
+    <ul>
+        <h2>跨域</h2>
+        <li>浏览器为了保护隐私规定：JS运行在源A里，就只能获得A的数据，不能获得源B的数据</li>
+        <p></p>
+        <li>在源A里获得源B的数据就是跨域</li>
+    </ul>
+    <ul>
+        <h2>JSONP 跨域</h2>
+        <li>qq.com的数据写到friends.js中,bk.com用script标签引用/friends.js，然后让friends.js执行定义好的函数window.xxx</li>
+        <p></p>
+        <li>给window.xxx赋值，让其内容data等于要获取的数据 <code>const data = fs.readFileSync('./public/friends.json').toString()</code>
+        </li>
+        <p></p>
+        <li>然后调用window.xxx（window.xxx就是回调）</li>
+        <p></p>
+        <li>可以用referer指定谁访问</li>
+        <p></p>
+        <li>因为是script标签，所以没法像ajax一样读到状态码，也不支持POST</li>
+    </ul>
+    <ul>
+        <h2>CORS 跨域</h2>
+        <li>CORS
+            跨域比较简单，在源A的响应头(response.setHeader)里加入'Access-Control-Allow-Origin'就可以允许别的网站跨域访问，同时也可以在这句话后面加上允许访问的网址，这样就能做到允许特定网站访问。
+        </li>
+        <p></p>
+        <li>但这个方法IE不兼容</li>
+    </ul>
+</body>
+
+</html>

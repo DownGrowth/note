@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1>promise</h1>
+    <ul>
+        <h2>promise的用途</h2>
+        <li>Promise 对象用于表示一个异步操作的最终完成（或失败）及其结果值。</li>
+        <li>和ajax一样，对发送请求的异步函数进行封装</li>
+    </ul>
+    <ul>
+        <h2>创建一个 new Promise</h2>
+        <li><code>return new Promise((resolve,reject)=>{})</code></li>
+    </ul>
+    <ul>
+        <h2>使用 Promise.prototype.then</h2>
+        <li>then() 方法返回一个 Promise 。它最多需要有两个参数：Promise 的成功和失败情况的回调函数。</li>
+        <p></p>
+        <li><code>p.then(onFulfilled[, onRejected]);
+
+p.then(value => {
+  // fulfillment
+}, reason => {
+  // rejection
+});</code></li>
+        <p></p>
+        <li>then 方法返回一个 Promise 对象，其允许方法链。
+
+            你可以传递一个匿名函数给 then，并且，如果它返回一个 Promise，一个等价的 Promise 将暴露给后续的方法链。</li>
+    </ul>
+    <ul>
+        <h2>使用 Promise.all</h2>
+        <li>Promise.all() 方法接收一个 promise 的 iterable 类型（注：Array，Map，Set 都属于 ES6 的 iterable 类型）的输入，并且只返回一个Promise实例，
+            那个输入的所有 promise 的 resolve 回调的结果是一个数组。这个Promise的 resolve 回调执行是在所有输入的 promise 的 resolve 回调都结束，或者输入的 iterable
+            里没有 promise 了的时候。它的 reject 回调执行是，只要任何一个输入的 promise 的 reject 回调执行或者输入不合法的 promise 就会立即抛出错误，并且 reject
+            的是第一个抛出的错误信息。</li>
+        <p></p>
+        <li>Promise.all等待所有都完成（或第一个失败）</li>
+        <p></p>
+        <li><code>var p1 = Promise.resolve(3);
+var p2 = 1337;
+var p3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([p1, p2, p3]).then(values => {
+  console.log(values); // [3, 1337, "foo"]
+});</code></li>
+    </ul>
+    <ul>
+        <h2>使用Promise.race</h2>
+        <li>Promise.race(iterable) 方法返回一个 promise，一旦迭代器中的某个 promise 解决或拒绝，返回的 promise 就会解决或拒绝。</li>
+        <p></p>
+        <li><code>const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);});</code></li>
+        <p></p>
+        <li>race 函数返回一个 Promise，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（ resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。
+
+            如果传的迭代是空的，则返回的 promise 将永远等待。
+
+            如果迭代包含一个或多个非承诺值和/或已解决/拒绝的承诺，则 Promise.race 将解析为迭代中找到的第一个值。</li>
+    </ul>
+</body>
+
+</html>

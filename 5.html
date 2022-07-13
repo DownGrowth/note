@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1>JavaScript 的诞生</h1>
+    <ul>
+        <h2>JavaScript 的历史 </h2>
+        <li>
+            JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。</li>
+        <p></p>
+        <li>JavaScript最初由Netscape的Brendan
+            Eich设计，最初将其脚本语言命名为LiveScript，后来Netscape在与Sun合作之后将其改名为JavaScript。JavaScript最初受Java启发而开始设计的，目的之一就是“看上去像Java”，因此语法上有类似之处，一些名称和命名规范也借自Java，但JavaScript的主要设计原则源自Self和Scheme。JavaScript与Java名称上的近似，是当时Netscape为了营销考虑与Sun微系统达成协议的结果。微软同时期也推出了JScript来迎战JavaScript的脚本语言。
+        </li>
+        <p></p>
+        <li>发展初期，JavaScript的标准并未确定，同期有Netscape的JavaScript，微软的JScript和CEnvi的ScriptEase三足鼎立。为了互用性，Ecma国际（前身为欧洲计算机制造商协会）创建了ECMA-262标准（ECMAScript），两者都属于ECMAScript的实现，尽管JavaScript作为给非程序人员的脚本语言，而非作为给程序人员的脚本语言来推广和宣传，但是JavaScript具有非常丰富的特性。
+        </li>
+        <p></p>
+        <li>1997年，在ECMA（欧洲计算机制造商协会）的协调下，由Netscape、Sun、微软、Borland组成的工作组确定统一标准：ECMA-262。完整的JavaScript实现包含三个部分：ECMAScript，文档对象模型，浏览器对象模型。
+        </li>
+        <p></p>
+        <li>JavaScript的标准是ECMAScript 。截至 2012 年，所有浏览器都完整的支持ECMAScript 5.1，旧版本的浏览器至少支持ECMAScript 3
+            标准。2015年6月17日，ECMA国际组织发布了ECMAScript的第六版，该版本正式名称为 ECMAScript 2015，但通常被称为ECMAScript 6 或者ES2015。
+        </li>
+
+    </ul>
+    <ul>
+        <h2>JavaScript 诞生记</h2>
+        <li>1994年，网景公司发布了Navigator浏览器0.9版。是历史上第一个比较成熟的网络浏览器，但这个版本的浏览器只能用来浏览，不能与访问者互动。所以网景公司急需一种网页脚本语言，使得浏览器可以与网页互动。"
+        </li>
+        <p></p>
+        <li>1995年，sun公司将Oak语言更名为Java并推出，网景公司与其合作想让Java作为脚本语言嵌入浏览器中使用，但因为太难而放弃。同年他们雇佣了Brendan Eich。</li>
+        <p></p>
+        <li>1995年5月，网景公司做出决策，未来的网页脚本语言必须"看上去与Java足够相似"，但是比Java简单，使得非专业的网页作者也能很快上手。</li>
+        <li>Brendan Eich被指定为这种"简化版Java语言"的设计师,但他对Java一点兴趣都没有，所以仅仅用了十天就设计出了JavaScript。</li>
+        <p></p>
+        <li>Javascript语言实际上是两种语言风格的混合产物----（简化的）函数式编程+（简化的）面向对象编程。</li>
+    </ul>
+    <ol>
+        <h2>JavaScript 的10个设计缺陷</h2>
+        <li>不适合开发大型程序。<p></p>Javascript没有名称空间（namespace），很难模块化；没有如何将代码分布在多个文件的规范；允许同名函数的重复定义，后面的定义可以覆盖前面的定义，很不利于模块化加载。
+        </li>
+        <p></p>
+        <li> 非常小的标准库<p></p> Javascript提供的标准函数库非常小，只能完成一些基本操作，很多功能都不具备。</li>
+        <p></p>
+        <li>null和undefined <p></p>null和undefined容易混淆，含义不同，不应该设计null。</li>
+        <p></p>
+        <li>全局变量难以控制 <p></p>Javascript的全局变量，在所有模块中都是可见的；任何一个函数内部都可以生成全局变量，这大大加剧了程序的复杂性。</li>
+        <p></p>
+        <li>自动插入行尾分号<p></p>Javascript的所有语句，都必须以分号结尾。但是，如果你忘记加分号，解释器并不报错，而是为你自动加上分号。有时候，这会导致一些难以发现的错误。</li>
+        <p></p>
+        <li>加号运算符<p></p>表示数字与数字的和，也表示字符与字符的连接，加剧了运算复杂性。</li>
+        <p></p>
+        <li>NaN <p></p>表示超出解释器极限，不如直接报错。</li>
+        <p></p>
+        <li> 数组和对象的区分<p></p>数字也是对象，所以要区分一个对象是不是数字相当麻烦。</li>
+        <p></p>
+        <li>== 和 === <p></p>==用来判断两个值是否相等。当两个值类型不同时，会发生自动转换，得到的结果非常不符合直觉。尽量都使用===</li>
+        <p></p>
+        <li>基本类型的包装对象<p></p>
+            Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。</li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <h1>《CSS知识总结》</h1>
+    <h2>浏览器渲染原理</h2>
+    <section>
+        <p>
+        <ul>
+            <li>根据HTML构建HTML树（dom）</li>
+            <li>根据CSS构建CSS树(cssom)</li>
+            <li>将两棵树合并成一颗渲染树(render tree)</li>
+            <li>Layout布局（文档流、盒模型、计算大小和位置）</li>
+            <li>Paint绘制（把边框颜色、文字颜色、阴影等画出来，不需要再算布局）</li>
+            <li>compose（只需要合成，transform）</li>
+            <li>用transform,比left性能好</li>
+            <li>坚持为您的动画进行变换和不透明度更改。</li>
+            <li>will-change使用或提升移动元素translateZ。</li>
+            <li>避免过度使用促销规则；层需要内存和管理</li>
+        </ul>
+        <h2>CSS动画的两种做法</h2>
+        <ul>
+            <h3>transition</h3>
+            <li>transition:属性名 时长 过渡方式 延迟</li>
+            <li>transition可以用all代表所有属性</li>
+            <li>过渡方式有liner（线性过渡）、ease(默认的）、ease-in（缓入）、ease-out（缓出）等等其他不常用的。</li>
+            <li>display:none到block不能过渡，用visibility:hidden到visible、opacity:0到1</li>
+            <li>用两次transform可以实现中间点</li>
+            <h3>animation</h3>
+            <li>用法举例：@keyframes 名称{0%{left:0} 50%{left:50px} 100%{left:100%}}</li>
+            <li>animation:时长 过渡方式 延迟 次数 方向 填充方式 是否暂停 动画名</li>
+            <li>过渡方式和transition一样</li>
+            <li>次数可以写infinite（无限次）</li>
+            <li>方向有reverse（反向）、alternate（来回）、alternate-reverse（反向来回）</li>
+            <li>填充方式有none、forwards（在最后的位置停下）、backwards、both</li>
+            <li>paused、running可以在任意位置暂停</li>
+        </ul>
+        <h2>position</h2>
+        <ul>
+            <li>relative：相对定位，不脱离文档流。</li>
+            <li>absolute：绝对定位，相对于祖先元素中最近的一个定位元素定位。</li>
+            <li>fixed（相对于视口，不太好用）。</li>
+            <li>static（默认）</li>
+            <li>sticky：粘zhi内容</li>
+        </ul>
+
+</body>
+
+</html>

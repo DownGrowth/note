@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1>jQuery功能</h1>
+    <h2>jQuery如何获取元素</h2>
+    <ul>
+        <h3>css选择器</h3>
+        <li>选择一个表达式，放入jQuery构造函数 jQuery()或者$()，得到被选中的元素</li>
+        <li>$(document) //选择整个文档对象</li>
+        <li>$('#myId') //选择ID为myId的网页元素</li>
+        <li>$('div.myClass') // 选择class为myClass的div元素</li>
+        <li>$('input[name=first]') // 选择name属性等于first的input元素</li>
+    </ul>
+    <ul>
+        <h3>jQuery特有表达式</h3>
+        <li>$('a:first') //选择网页中第一个a元素</li>
+        <li>$('tr:odd') //选择表格的奇数行</li>
+        <li>$('#myForm :input') // 选择表单中的input元素</li>
+        <li>$('div:visible') //选择可见的div元素</li>
+        <li>$('div:gt(2)') // 选择所有的div元素，除了前三个</li>
+        <li>$('div:animated') // 选择当前处于动画状态的div元素</li>
+    </ul>
+
+    <h2>jQuery 的链式操作是怎样的</h2>
+    <ul>
+        <li>jQuery链式操作是指不同的操作可以连在一起，比如$('.test').find('.child').addClass('red')</li>
+        <li>链式操作的原理在于jQuery在每次执行完一个指令后会返回api，也就是jQuery对象（jQuery构造出的对象）,所以api就从前面传到了后面，后续的操作就可以直接进行，不用再写一遍。</li>
+    </ul>
+    <h2>jQuery 如何创建元素</h2>
+    <ul>
+        <li>jQuery创建元素需要把新元素传入jQuery构造函数</li>
+        <li>创建方式：.append() ，例如$('.test').append('hello')。新建的元素作为最后一个子元素，如果有多个目标元素，内容将被复制然后按顺序插入到每个目标里面。</li>
+        <li>也可以选择一个元素插入到另一个元素里面：$('.test').append($('h2'));此时的操作是移动而不是复制</li>
+        <li>appendTo()，用法和apend正好相反：('hello').appendTo$('.test')</li>
+        <li>也就是让前面的元素出现在后面的目标里</li>
+    </ul>
+    <h2>jQuery 如何移动元素</h2>
+    <ul>
+        <li>.insertAfter()，把div元素移动p元素后面：$('div').insertAfter($('p'));</li>
+        <li>.after()，把p元素加到div元素前面：$('p').after($('div'));</li>
+        <li>第一种方法返回div元素，第二种方法返回p元素,用法和append一样，也可以创建元素。</li>
+        <li><strong>.insertAfter()和.after()：在现存元素的外部，从后面插入元素</strong></li>
+        <li><strong>.insertBefore()和.before()：在现存元素的外部，从前面插入元素</strong></li>
+        <li><strong>.appendTo()和.append()：在现存元素的内部，从后面插入元素</strong></li>
+        <li><strong>.prependTo()和.prepend()：在现存元素的内部，从前面插入元素</strong></li>
+    </ul>
+    <h2>jQuery 如何修改元素的属性</h2>
+    <ul>
+        <li>jQuery将取值getter和赋值setter合并了</li>
+        <li>$('h1').html(); //html()没有参数，表示取出h1的值</li>
+        <li>$('h1').html('Hello'); //html()有参数Hello，表示对h1进行赋值</li>
+        <li>.html() 取出或设置html内容</li>
+        <li>.text() 取出或设置text内容</li>
+        <li>.attr() 取出或设置某个属性的值</li>
+        <li>.width() 取出或设置某个元素的宽度</li>
+        <li>.height() 取出或设置某个元素的高度</li>
+        <li>.val() 取出某个表单元素的值</li>
+        <li><strong>赋值的时候会对集合里面的所有元素赋值，取值的时候只会取第一个元素的值，.text()例外，它取出所有元素的text内容</strong></li>
+    </ul>
+</body>
+
+</html>

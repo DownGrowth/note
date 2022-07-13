@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <ul>
+        <h2>call</h2>
+        <li>call() 方法使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数。</li>
+        <p></p>
+        <li> person1.sayHi.call(person1)就等于person1.sayHi(),区别在于后面的写法是js帮我们讲this，也就是person1传到了后面
+        </li>
+    </ul>
+    <ul>
+        <h2>apply</h2>
+        <li>apply和call的作用完全一样，区别在于语法不同,call要按顺序将参数穿进去。apply则是把参数放在数组里</li>
+        <p></p>
+        <li>右边代码最后数组array1为'bk,18,123,456</li>
+    </ul>
+    <ul>
+        <h2>bind</h2>
+        <li>bind() 方法创建一个新的函数，在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</li>
+        <p></p>
+        <li>右边的代码中，声明unboundGetX等于函数module.getX，这时候打出unboundGetX无法得到module中变量x的值，因为引用的是全局变量。但使用了bind后，this被指定为module，此时已经是一个新的函数，所以这个新函数中的参数也就能使用了。
+        </li>
+    </ul>
+</body>
+
+</html>

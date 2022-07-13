@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1>JS 对象基本用法</h1>
+    <h2>声明对象的两种语法</h2>
+    <ul>
+        <li><code>let obj={'name':'BK' , 'age':'18'} </code></li>
+        <li><code>let obj=new Object({'name':'BK','age':'18'})</code></li>
+    </ul>
+    <h2>如何删除对象的属性</h2>
+    <ul>
+        <li>delete obj.xxx或者delete obj['xxx']</li>
+        <li>delete obj.xxx删除的属性名，obj.xxx=undefined删除的是属性值</li>
+        <li>'xxx' in obj === false 表示不含属性名</li>
+        <li>'xxx' in obj ===undefined 表示有属性名，值为undefined</li>
+        <li>obj.xxx === undefined 不能判断x是不是在obj里，要用'xxx' in obj判断 </li>
+
+    </ul>
+    <h2>如何查看对象的属性</h2>
+    <ul>
+        <li>Object.keys(obj)查看自身所有属性</li>
+        <li>Object.values(obj)查看自身所有属性值</li>
+        <li>Object.entries(value)查看自身所有属性名和属性值</li>
+        <li>console.dir(obj)查看自身所有属性名和属性值以及共有属性</li>
+        <li>obj.hasOwnProperty('属性名'）可以判断一个属性是自身的还是共有的</li>
+    </ul>
+    <h2>如何修改或增加对象的属性</h2>
+    <ul>
+        <li>let obj={'name':'xxx'}</li>
+        <li>obj.name='xxx'</li>
+        <li>obj['name']='xxx'</li>
+        <li>obj['na'+'me']='xxx'</li>
+        <li>let key='name';obj[key]='xxx'</li>
+        <li>Object.assign(obj,{p1:1 , p2:2 , p3:3})可以批量赋值</li>
+        <li>obj.name等价于obj['name']，不等价于obj[name] 因为这里的name是字符串而不是变量</li>
+        <li>let name='bk' obj[name]等价于obj['bk']</li>
+
+    </ul>
+    <h2>'name' in obj和obj.hasOwnProperty('name') 的区别</h2>
+    <ul>
+        <li>'name' in obj 不会区分这个'name'是自身的还是共有的，obj.hasOwnProperty('name')会判断这个'name'属性是不是自身独有的</li>
+    </ul>
+</body>
+
+</html>

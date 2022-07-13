@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <h1>《浅析URL》</h1>
+    <h2>URL</h2>
+    <section>
+        <p>
+        <ul>
+            <li>URL包括协议、域名、端口、路径、查询参数和锚点</li>
+            <li>协议（IP）主要负责定位到某台设备</li>
+            <li>端口主要负责提供不同服务，如HTTP主要用80端口，协议和端口缺一不可</li>
+            <li>域名是对IP的别称，一个域名可以对应不同IP，一个IP也可以对应不同域名</li>
+            <li>路径可以对应到不同的页面</li>
+            <li>查询参数可以在同一页面对应到不同内容</li>
+            <li>锚点可以在同一页面对应到不同位置</li>
+
+
+        </ul>
+        <h2>DNS</h2>
+        <ul>
+
+            <li>域名和IP通过DNS对应</li>
+            <li>nslookup就是DNS查询,查询DNS的记录，查看域名解析是否正常，在网络故障的时候用来诊断网络问题。</li>
+            <li>语法是nslookup –d [其他参数] domain [dns-server]，没有dns-sever会用系统默认的服务器</li>
+        </ul>
+        <h2>IP</h2>
+        <ul>
+            <li>IP用于定位到某台设备，分为内网IP和外网IP</li>
+            <li>外网IP和分配给路由器的，路由器连接到电信便是用外网IP</li>
+            <li>内网IP是路由器创建并分配个家里设备的，一般是192.168.xxx.xxx</li>
+            <li>上网通过内网连接路由器再由路由器连接外网，内网外网之间是隔绝的</li>
+            <li>127.0.01代表自己，localhost通过host指定为自己。</li>
+            <li>ping可以获取服务器IP，用法是ping +网址/域名</li>
+        </ul>
+        <h2>域名</h2>
+        <ul>
+            <li>域名就是对IP的别称，是字符串.com</li>
+            <li>xxxx.com是二级域名，www.xxxx.com是三级域名，两者无关。</li>
+            <li>当输入域名后浏览器会向电信提供的DNS询问域名对应什么IP，收到回答的IP后浏览器再向对应IP的80/443端口发送请求。</li>
+        </ul>
+</body>
+
+</html>

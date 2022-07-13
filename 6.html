@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1>JS基本语法</h1>
+    <h2>表达式</h2>
+    <ul>
+        <li> 1+2是一个表达式，值是3 </li>
+        <li> add(1+2)表达式的值为函数的返回值</li>
+        <li> console.log表达式的值是函数本身</li>
+        <li> console.log(3)的值是undefined</li>
+    </ul>
+    <h2>语句</h2>
+    <ul>
+        <li> var a=1是一个语句</li>
+
+        <li> 大部分空格都没有意义，回车也是，但在var和a中间空格不能省略，return后面也不能加回车</li>
+    </ul>
+    <h2>标识符</h2>
+    <ul>
+        <li> var后面可以跟Unicode字母或$或_或中文，但第一个字符不能是数字</li>
+    </ul>
+    <h2>if else语句</h2>
+    <ul>
+        <li> 用法：if(表达式){语句1}else{语句2}</li>
+        <li>语句1和语句2都可以嵌套if else</li>
+        <li>逗号表示一句话没有结束，分号表示结束</li>
+        <li> 最推荐的写法<code>if(表达式){<p></p>
+      
+      语句<p></p>
+      } else {<p>语句</p>
+         <p></p>
+      }</code>
+        </li>
+        <li>如果if else里只有一个语句，就用?:表达式。用法是：表达式1? 表达2: 表达式3”</li>
+        <li>switch语句 <code>switch(fruit){<p></p>
+      
+     case "banana":<p></p>
+      // ...  <p></p>
+      break; <p></p>
+       case "banana":<p></p>
+      // ...  <p></p>
+      break;<p></p>
+      default: <p></p>
+      // ... <p></p>
+      }
+     </code>
+        </li>
+        <li>&&短路逻辑，A&&B&&C&&D，如果A为真则输出D，A为假则输出A</li>
+        <li>||短路逻辑，A||B||C||D,A为假则输出D，A为真则输出A，与上面的相反。</li>
+
+    </ul>
+    <h2>while、for循环</h2>
+    <ul>
+        <li>var a=1 (初始化) whlie(表达式，就是判断条件){语句,就是循环体}</li>
+        <li>判断表达式的真假</li>
+        <li>当判断式为真，执行语句，执行完再看表达式的真假</li>
+        <li>当判断式为假，执行后面的语句</li>
+        <li>浮点数会不精确</li>
+        <li>for是while的方便写法</li>
+        <li>for(语句1；表达式2;语句3){循环体}</li>
+        <li>先执行语句1</li>
+        <li>然后判断表达式2</li>
+        <li>如果为真，执行循环体，然后执行语句3</li>
+        <li>如果为假，则跳出循环体，执行后面的语句</li>
+        <li>上述for语句中的四个部分都可以省略，但可能会缺条件而一直循环</li>
+        <li>setTimeout是过一会再执行</li>
+
+
+
+
+    </ul>
+    <h2>break和continue</h2>
+    <ul>
+        <li>break是退出当前的所有循环，continue是退出这次的循环，去下一次的</li>
+    </ul>
+    <h2>lable</h2>
+    <ul>
+        <li>lable是标签</li>
+        <li><code>foo:{<p></p>
+     console.log(1);<p></p>
+      break foo;<p></p>
+      console.log('本行不会输出') <p></p>
+      } <p></p>
+      
+      console.log(2) <p></p>
+      }</code></li>
+        <li>foo是一个lable，后面的1是语句</li>
+    </ul>
+
+
+</body>
+
+</html>

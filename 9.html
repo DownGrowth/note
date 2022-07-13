@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <h1> DOM 事件模型</h1>
+
+    <ul>
+        <h2>什么是DOM事件</h2>
+        <li>DOM事件是HTML DOM允许JS在HTML文档中注册不同事件处理程序，目前DOM事件有100多种</li>
+    </ul>
+    <ul>
+        <h2>冒泡和捕获</h2>
+        <li>从点击事件研究</li>
+        <li>假如一个div里面还有多个div，当我们点击最里面那个div的内容的时候会发生什么</li>
+        <li>点击的时候既是点击最里面的div，也是点击了中间的div，也是点击了最外面的div</li>
+        <li>捕获是网景的，就是从外到内找监听函数</li>
+        <li>冒泡是IE5的，就是从内到外找监听函数</li>
+        <li>最后W3C提供了<code>baba.addEventListener('click', fn, bool)</code>，使浏览器同时支持两种</li>
+        <li>上面代码中的布尔值如果是true，就是捕获，如果没有布尔值或者布尔值是falsy，那就是冒泡</li>
+        <li>先捕获，再冒泡</li>
+    </ul>
+
+</body>
+
+</html>
